@@ -3,14 +3,42 @@
 <head>
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 
 <body>
 
-<div data-role="page">
+<div data-role="page" id="inicio">
+	<div data-role="header">
+    	<h1>Salva un perro</h1>
+    </div>
+	<div role="main" class="ui-content">
+		<img src="img/perrito.jpg" class="imagenAncha">
+    	<a href="#menu" class="ui-btn ui-icon-camera ui-btn-icon-left">Tomar foto</a>
+    </div>
+	<div data-role="footer">
+	   <h1>Cuida tus animales</h1>
+	</div>
+</div>
+
+
+<div data-role="page" id="menu">
+	<div data-role="header">
+    	<h1>Salva un perro</h1>
+    </div>
+	<div role="main" class="ui-content">
+    	<a href="#" class="ui-btn ui-icon-camera ui-btn-icon-left">Tomar foto</a>
+    </div>
+	<div data-role="footer">
+	   <h1>Cuida tus animales</h1>
+	</div>
+</div>
+
+
+<div data-role="page" id="galeria">
 	<div data-role="header">
     	<h1>Salva un perro</h1>
     </div>
