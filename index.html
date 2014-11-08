@@ -2,53 +2,382 @@
 <html>
 <head>
 	<title>Page Title</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-	<link rel="stylesheet" href="css/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
 </head>
 
 <body>
 
-<div data-role="page" id="inicio">
-	<div data-role="header">
-    	<h1>Salva un perro</h1>
-    </div>
-	<div role="main" class="ui-content">
-		<img src="img/perrito.jpg" class="imagenAncha">
-    	<a href="#menu" class="ui-btn ui-icon-camera ui-btn-icon-left">Tomar foto</a>
-    </div>
-	<div data-role="footer">
-	   <h1>Cuida tus animales</h1>
-	</div>
+  
+<!-- Inicio de muro -->
+<div data-role="page" id="muro">
+
+    	<div data-role="header" data-position="fixed">
+        	<h1>App animales</h1>
+            <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+        </div>
+    
+    <div role="main" class="ui-content">
+            <div class="ui-grid-a"> <!-- Grid 1 -->
+                <div class="ui-block-a">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso1.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso1" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso1.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block a -->
+                
+                <div class="ui-block-b">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso2.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso2" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso2.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block b -->
+                
+                <div class="ui-block-a">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso3" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso3.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso3" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso3.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block a -->
+           
+            <div class="ui-block-b">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso4" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso4.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso4" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso4.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block b -->
+                
+                <div class="ui-block-a">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso5" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso5.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso5" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso5.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block b -->
+                
+                <div class="ui-block-b">
+                    <div class="celdaMuro">
+                     <a href="#popupcaso6" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso8.gif" alt="Caso 1"></a> <!-- thumbnail -->
+                     
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
+                	 <h6>- Pique la foto para + información -</h6>
+                
+                        <div data-role="popup" id="popupcaso6" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso8.gif" style="max-height:512px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                            </div> <!-- /botones sociales -->
+                        </div> <!-- /popup -->
+                    </div><!-- celdamuro -->
+                </div><!-- /block b -->
+            </div><!-- /Grid 1 -->
+        
+            <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#muro" data-icon="bullets">Muro</a></li>
+                        <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
+                        <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+    </div> <!-- Final de muro -->
 </div>
 
 
-<div data-role="page" id="menu">
-	<div data-role="header">
-    	<h1>Salva un perro</h1>
-    </div>
-	<div role="main" class="ui-content">
-    	<a href="#" class="ui-btn ui-icon-camera ui-btn-icon-left">Tomar foto</a>
-    </div>
-	<div data-role="footer">
-	   <h1>Cuida tus animales</h1>
-	</div>
-</div>
 
 
-<div data-role="page" id="galeria">
-	<div data-role="header">
-    	<h1>Salva un perro</h1>
-    </div>
-	<div role="main" class="ui-content">
-    	<a href="#" class="ui-btn ui-icon-camera ui-btn-icon-left">Tomar foto</a>
-    </div>
-	<div data-role="footer">
-	   <h1>Cuida tus animales</h1>
-	</div>
-</div>
+<!-- Inicio de página -->
+<div data-role="page" id="denuncia">
+     <div data-role="header" data-position="fixed">
+         <a href="#redactarpost" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a>
+         <a href="#muro" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
+     </div>
+     <div data-role="footer" data-position="fixed">
+         <a href="#redactarpost" class="ui-btn ui-icon-camera ui-btn-icon-notext ui-corner-all ui-btn-inline">No text</a>
+     </div>
+</div> <!-- Final de página -->
 
+
+
+
+<!-- Inicio de página -->
+<div data-role="page" id="redactarpost">
+
+    <div data-role="header" data-position="fixed">
+        <h1>App animales</h1>
+        <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+        <a href="#denuncia" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> <!-- boton atrás -->
+    </div><!-- /header -->
+    
+    <div role="main" class="ui-content">
+        <img src="img/Fotos muro/Caso1.gif" class="imagenAncha">
+        
+        <div>
+            <a href="#popupmapacaso" data-rel="popup" data-position-to="window" data-transition="pop"><img class="popphoto imagenAncha" src="img/thumbmapa.gif" alt="Caso 1"></a> <!-- thumbnail -->
+            <div data-role="popup" id="popupmapacaso" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/mapacaso.gif" style="max-height:512px;">
+            </div>
+        </div>
+        
+        <form>
+        <label for="textarea-1">Descripción:</label>
+        <textarea name="textarea-1" id="textarea-1"></textarea>
+        </form>
+        
+        <div class="botones-sociales">
+                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
+                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
+                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+                                <a href="#muro" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-inline">mapa</a>
+        </div> <!-- /botones sociales -->
+    </div>
+    
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#muro" data-icon="bullets">Muro</a></li>
+                            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
+                            <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                        </ul>
+                    </div><!-- /navbar -->
+                </div>
+</div> <!-- Final de página -->
+
+
+
+
+<!-- Inicio de página -->
+<div data-role="page" id="mapa">
+    <div data-role="header" data-position="fixed">
+            	<h1>App animales</h1>
+                <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+    </div>
+    
+        <div role="main" class="ui-content" id="map-canvas">
+            
+        </div>
+    
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+            <div data-role="navbar">
+                        <ul>
+                            <li><a href="#muro" data-icon="bullets">Muro</a></li>
+                            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
+                            <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                        </ul>
+            </div><!-- /navbar -->
+    </div>
+</div> <!-- Final de página -->
+
+
+
+
+
+<!-- Inicio de página -->
+<div data-role="page" id="configuracion">
+
+    <div data-role="header" data-position="fixed">
+        	<h1>Configuración</h1>
+            <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+            <a href="#muro" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
+        </div>
+        
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#"><img src="../_assets/img/gf.png" alt="privacidad" class="ui-li-icon ui-corner-none">Privacidad</a></li>
+            <li><a href="#"><img src="../_assets/img/de.png" alt="cuentas" class="ui-li-icon">Cuentas enlazadas</a></li>
+            <li><a href="#"><img src="../_assets/img/gb.png" alt="notificaciones" class="ui-li-icon">Notificaciones</a></li>
+            <li><a href="#"><img src="../_assets/img/fi.png" alt="originales" class="ui-li-icon">Config. Fotos originales</a></li>
+            <li><a href="#"><img src="../_assets/img/us.png" alt="ayuda" class="ui-li-icon ui-corner-none">Ayuda</a></li>
+            <li><a href="#"><img src="../_assets/img/us.png" alt="error" class="ui-li-icon ui-corner-none">Reportar un error</a></li>
+            <li><a href="#"><img src="../_assets/img/us.png" alt="version" class="ui-li-icon ui-corner-none">Versión</a>
+                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+            </li>
+            <li><a href="#"><img src="../_assets/img/us.png" alt="United States" class="ui-li-icon ui-corner-none">Salir</a></li>
+        </ul>
+        
+            <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <h3>App animales - Versión</h3>
+            <p>®2014 Kakofonía Studio. Todos los derechos reservados.</p>
+            <p>Este es un software libre para usarse.</p>
+            <p>Si piensas que App Animales es útil y te gustaría ayudar a mejorarlo, por favor, haz una donación.</p>
+            <p>¡Muchas gracias!</p>
+            <p>Kakofonía Studio.</p>
+            </p>
+            <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-btn-inline ui-mini">Donación</a>
+            <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-btn-inline ui-mini">Aceptar</a>
+            </div>
+    </div>
+        
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+             <div data-role="navbar">
+                        <ul>
+                            <li><a href="#muro" data-icon="bullets">Muro</a></li>
+                            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
+                            <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                        </ul>
+             </div><!-- /navbar -->
+    </div>
+</div> <!-- Final de página -->
+
+
+
+<script>
+    
+    $( document ).on( "pagecreate", "#mapa", function() {
+    var defaultLatLng = new google.maps.LatLng(4.6496118,-74.062991); // Default to Hollywood, CA when no geolocation support
+    if ( navigator.geolocation ) {
+        function success(pos) {
+        // Location found, show map with these coordinates
+            defaultLatLng = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+            drawMap(defaultLatLng);
+        }
+        function fail(error) {
+            drawMap(defaultLatLng); // Failed to find location, show default map
+        }
+        // Find the users current position. Cache the location for 5 minutes, timeout after 6 seconds
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+    } else {
+        drawMap(defaultLatLng); // No geolocation support, show default map
+    }
+    function drawMap(latlng) {
+        var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+    // Add an overlay to the map of current lat/lng
+    
+    
+    
+            var contentString0 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Usted está aquí</h1>'+
+              '<div id="bodyContent">'+
+              '<p>Esta es su ubicación actual.</p>'+
+              '</div>'+
+              '</div>';
+        
+          var infowindow0 = new google.maps.InfoWindow({
+              content: contentString0
+          });
+        
+          var marker0 = new google.maps.Marker({
+              position: defaultLatLng,
+              map: map,
+              title: 'Ud está aquí'
+          });
+          google.maps.event.addListener(marker0, 'click', function() {
+            infowindow0.open(map,marker0);
+          });
+    
+    
+    
+            var pos1 = new google.maps.LatLng(4.6496118,-74.062991);
+            var contentString1 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+              'sandstone rock formation in the southern part of the '+
+              '</p>'+
+              '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+              'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+              '(last visited June 22, 2009).</p>'+
+              '</div>'+
+              '</div>';
+        
+          var infowindow1 = new google.maps.InfoWindow({
+              content: contentString1
+          });
+        
+          var marker1 = new google.maps.Marker({
+              position: pos1,
+              map: map,
+              title: 'Uluru (Ayers Rock)'
+          });
+          google.maps.event.addListener(marker1, 'click', function() {
+            infowindow1.open(map,marker1);
+          });
+          
+    }
+    });
+</script>
 
 </body>
+</html>
