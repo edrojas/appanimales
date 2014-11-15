@@ -4,10 +4,12 @@
 	<title>Page Title</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="css/themes/woof.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
 </head>
 
@@ -18,7 +20,7 @@
 <div data-role="page" id="muro">
 
     	<div data-role="header" data-position="fixed">
-        	<h1>App animales</h1>
+        	<h1>Mi Muro</h1>
             <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
         </div>
     
@@ -165,9 +167,16 @@
          <a href="#redactarpost" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a>
          <a href="#muro" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
      </div>
-     <div data-role="footer" data-position="fixed">
+     
+    <div role="main" class="ui-content">
+        <video src="video/pruebavideo.mp4" style="width: 100% !important; height: auto !important;" autoplay>
+        Tu navegador no implementa el elemento <code>video</code>.
+        </video>
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
          <a href="#redactarpost" class="ui-btn ui-icon-camera ui-btn-icon-notext ui-corner-all ui-btn-inline">No text</a>
-     </div>
+    </div>
 </div> <!-- Final de página -->
 
 
@@ -227,7 +236,6 @@
     </div>
     
         <div role="main" class="ui-content" id="map-canvas">
-            
         </div>
     
     <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
@@ -294,7 +302,7 @@
 
 
 
-<script>
+<script> //google maps
     
     $( document ).on( "pagecreate", "#mapa", function() {
     var defaultLatLng = new google.maps.LatLng(4.6496118,-74.062991); // Default to Hollywood, CA when no geolocation support
@@ -323,7 +331,7 @@
     
     
     
-            var contentString0 = '<div id="content">'+
+            var contentString0 = '<div id="content">'+ // etiquetas con info
               '<div id="siteNotice">'+
               '</div>'+
               '<h1 id="firstHeading" class="firstHeading">Usted está aquí</h1>'+
@@ -347,7 +355,7 @@
     
     
     
-            var pos1 = new google.maps.LatLng(4.6496118,-74.062991);
+            var pos1 = new google.maps.LatLng(4.6496118,-74.062991); // etiquetas con info
             var contentString1 = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
