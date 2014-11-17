@@ -4,10 +4,11 @@
 	<title>Page Title</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/themes/woof.css" />
-    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/themes/woof.css" /> <!-- Themeroller -->
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" /> <!-- Themeroller -->
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery.mobile-1.4.4.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
@@ -15,8 +16,67 @@
 
 <body>
 
+
+
+<!-- LOGIN -->
+<div data-role="page" id="login">
+    <div data-role="header" data-position="fixed">
+        <h1>¡Gracias por venir!</h1>
+        <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+    </div>
+    
+    <div align= center role="main" class="ui-content">
+        <img src="img/Logo.png" class="logologin">
+        <a href="#loginfacebook" class="ui-btn ui-corner-all">Ingresar con Facebook</a>
+        <a href="#logintwitter" class="ui-btn ui-corner-all">Ingresar con Twitter</a>
+        <a href="#muro" class="ui-btn ui-corner-all">Saltar este paso</a>
+    </div>
+    
+    <div align=center class="firma" data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+        <p><b>© 2014 Todos los derechos reservados</b></p>
+        <p><b>Proyecto realizado por:</b></p>
+        <p><b>Edgar M. Rojas - Alejandra Camargo - Diana C. Angarita</b></p>
+        <p><b>Bogotá - Colombia</b></p>
+    </div>
+</div> <!-- Final de página -->
+
+
+
+<!-- LOGIN FACEBOOK -->
+<div data-role="page" id="loginfacebook">
+    <div data-role="header" data-position="fixed">
+        <h1>Ingresa tus datos</h1>
+        <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+    </div>
+    
+    <div align="center" role="main" class="ui-content" data-transition="fade">
+        <img src="img/loginfacebook.png">
+        <a href="#login" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-center">Cerrar</a>
+    </div>
+</div> <!-- Final de página -->
+
+
+
+
+<!-- LOGIN TWITTER -->
+<div data-role="page" id="logintwitter">
+    <div data-role="header" data-position="fixed">
+        <h1>Ingresa tus datos</h1>
+        <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+    </div>
+    
+    <div align="center" role="main" class="ui-content" data-transition="fade">
+        <img src="img/logintwitter.png">
+        <a href="#login" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-center">Cerrar</a>
+    </div>
+</div> <!-- Final de página -->
+
+
+
+
+
   
-<!-- Inicio de muro -->
+<!-- MURO -->
 <div data-role="page" id="muro">
 
     	<div data-role="header" data-position="fixed">
@@ -30,16 +90,19 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso1.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
-                
-                        <div data-role="popup" id="popupcaso1" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                     <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Nam vitae pretium dolor, at efficitur mi. Mauris ut sapien sagittis, efficitur sapien non, pellentesque massa. Mauris ullamcorper cras amet.</p> <!-- parrafo -->
+                	 
+                        <div data-role="popup" id="popupcaso1" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso1.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -49,17 +112,19 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso2.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
+                    <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Aenean maximus lacus eu magna bibendum, sed tincidunt dui dignissim. Ut ut vulputate nulla. Pellentesque tristique purus vel nullam sodales.</p> <!-- parrafo -->
                 
-                        <div data-role="popup" id="popupcaso2" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <div data-role="popup" id="popupcaso2" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso2.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -69,17 +134,18 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso3" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso3.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
+                    <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Aenean turpis ipsum, dapibus eu nisi et, fermentum viverra sapien. Integer dapibus sed sem ac rutrum. In pulvinar orci eu justo turpis duis.</p> <!-- parrafo -->
                 
-                        <div data-role="popup" id="popupcaso3" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <div data-role="popup" id="popupcaso3" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso3.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -89,17 +155,18 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso4" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso4.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
+                    <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Nullam ut lorem nisi. Etiam vestibulum sollicitudin enim, eu faucibus augue varius ut. Ut volutpat, nisi vel pharetra iaculis, est volutpat.</p> <!-- parrafo -->
                 
-                        <div data-role="popup" id="popupcaso4" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <div data-role="popup" id="popupcaso4" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso4.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -109,17 +176,18 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso5" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso5.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
+                     <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Nam blandit, diam in viverra vehicula, urna nisi dictum purus, eu rhoncus velit orci non dolor. Vestibulum congue erat sollicitudin posuere.</p> <!-- parrafo -->
                 
-                        <div data-role="popup" id="popupcaso5" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <div data-role="popup" id="popupcaso5" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso5.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -129,17 +197,18 @@
                     <div class="celdaMuro">
                      <a href="#popupcaso6" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto imagenAncha" src="img/Fotos muro/Caso8.gif" alt="Caso 1"></a> <!-- thumbnail -->
                      
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p> <!-- parrafo -->
-                	 <h6>- Pique la foto para + información -</h6>
+                     <p class="piquefoto"><b>Toque la foto para más opciones</b></p>
+                     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse lacinia auctor est, id tempor nulla sed.</p> <!-- parrafo -->
                 
-                        <div data-role="popup" id="popupcaso6" data-overlay-theme="b" data-theme="b" data-corners="false"> <!-- popup -->
+                        <div data-role="popup" id="popupcaso6" data-overlay-theme="c" data-theme="c" data-corners="false"> <!-- popup -->
                         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/Fotos muro/Caso8.gif" style="max-height:512px;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
-                            <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-btn-inline">Denunciar post</a>
+                        <p class="textopopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate pellentesque ante vitae venenatis. In ac lorem ante. Nulla id sed.</p>
+                            <div class="ui-grid-d center">
+                                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-c"><a href="#mapa" class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                <div class="ui-block-d"></div>
+                                <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                             </div> <!-- /botones sociales -->
                         </div> <!-- /popup -->
                     </div><!-- celdamuro -->
@@ -149,9 +218,9 @@
             <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#muro" data-icon="bullets">Muro</a></li>
-                        <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
-                        <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                        <li><a href="#muro" data-icon="bullets">Mi muro</a></li>
+                        <li><a href="#denuncia" data-icon="camera" data-theme="a">Reporta</a></li>
+                        <li><a href="#mapa" data-icon="location">Ubica</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div>
@@ -161,38 +230,82 @@
 
 
 
-<!-- Inicio de página -->
+
+
+<!-- REPORTE (FOTO) -->
 <div data-role="page" id="denuncia">
      <div data-role="header" data-position="fixed">
-         <a href="#redactarpost" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a>
-         <a href="#muro" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
-     </div>
+        <h1>¡Toma una foto!</h1>
+        <a href="#configuracion" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
+    </div>
      
     <div role="main" class="ui-content">
-        <video src="video/pruebavideo.mp4" style="width: 100% !important; height: auto !important;" autoplay>
-        Tu navegador no implementa el elemento <code>video</code>.
-        </video>
+        <video src="video/videoreporte.mp4" width="100%" height="100%" autoplay></video>
     </div>
-    
-    <div data-role="footer" data-position="fixed">
-         <a href="#redactarpost" class="ui-btn ui-icon-camera ui-btn-icon-notext ui-corner-all ui-btn-inline">No text</a>
+        
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><a href="#galeria" class="ui-shadow ui-btn ui-corner-all">Galería</a></div>
+            <div class="ui-block-b"><a href="#previodenuncia" class="ui-shadow ui-btn ui-corner-all">Tomar foto</a></div>
+        </div>
+  
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+        <div data-role="navbar">
+            <ul>
+            <li><a href="#muro" data-icon="bullets">Mi muro</a></li>
+            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reporta</a></li>
+            <li><a href="#mapa" data-icon="location">Ubica</a></li>
+            </ul>
+        </div><!-- /navbar -->
     </div>
 </div> <!-- Final de página -->
 
 
 
 
-<!-- Inicio de página -->
+<!-- REPORTE (PREVIO) -->
+<div data-role="page" id="previodenuncia">
+     <div data-role="header" data-position="fixed">
+        <h1>¡Ya la tienes!</h1>
+        <a href="#redactarpost" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+        <a href="#muro" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
+    </div>
+     
+    <div role="main" class="ui-content">
+        <img src="img/Video reporte.gif" style="width: 100%">
+    </div>
+        
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><a href="#muro" class="ui-shadow ui-btn ui-corner-all">Galería</a></div>
+            <div class="ui-block-b"><a href="#denuncia" class="ui-shadow ui-btn ui-corner-all">Capturar de nuevo</a></div>
+        </div>
+  
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+        <div data-role="navbar">
+            <ul>
+            <li><a href="#muro" data-icon="bullets">Mi muro</a></li>
+            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reporta</a></li>
+            <li><a href="#mapa" data-icon="location">Ubica</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div> <!-- Final de página -->
+
+
+
+
+
+
+<!-- REDACTAR POST -->
 <div data-role="page" id="redactarpost">
 
     <div data-role="header" data-position="fixed">
         <h1>App animales</h1>
         <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
-        <a href="#denuncia" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> <!-- boton atrás -->
+        <a href="#previodenuncia" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> <!-- boton atrás -->
     </div><!-- /header -->
     
     <div role="main" class="ui-content">
-        <img src="img/Fotos muro/Caso1.gif" class="imagenAncha">
+        <img src="img/Video reporte.gif" class="imagenAncha">
         
         <div>
             <a href="#popupmapacaso" data-rel="popup" data-position-to="window" data-transition="pop"><img class="popphoto imagenAncha" src="img/thumbmapa.gif" alt="Caso 1"></a> <!-- thumbnail -->
@@ -210,7 +323,6 @@
                                 <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
                                 <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
                                 <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
-                                <a href="#muro" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-inline">mapa</a>
         </div> <!-- /botones sociales -->
     </div>
     
@@ -228,7 +340,9 @@
 
 
 
-<!-- Inicio de página -->
+
+
+<!-- MAPA-->
 <div data-role="page" id="mapa">
     <div data-role="header" data-position="fixed">
             	<h1>App animales</h1>
@@ -253,7 +367,9 @@
 
 
 
-<!-- Inicio de página -->
+
+
+<!-- CONFIGURACIÓN -->
 <div data-role="page" id="configuracion">
 
     <div data-role="header" data-position="fixed">
@@ -273,7 +389,7 @@
             <li><a href="#"><img src="../_assets/img/us.png" alt="version" class="ui-li-icon ui-corner-none">Versión</a>
                 <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop"></a>
             </li>
-            <li><a href="#"><img src="../_assets/img/us.png" alt="United States" class="ui-li-icon ui-corner-none">Salir</a></li>
+            <li><a href="#login"><img src="../_assets/img/us.png" alt="United States" class="ui-li-icon ui-corner-none">Salir</a></li>
         </ul>
         
             <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
@@ -299,6 +415,19 @@
              </div><!-- /navbar -->
     </div>
 </div> <!-- Final de página -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
