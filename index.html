@@ -236,7 +236,7 @@
 <div data-role="page" id="denuncia">
      <div data-role="header" data-position="fixed">
         <h1>¡Toma una foto!</h1>
-        <a href="#configuracion" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
+        <a href="#muro" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
     </div>
      
     <div role="main" class="ui-content">
@@ -299,8 +299,8 @@
 <div data-role="page" id="redactarpost">
 
     <div data-role="header" data-position="fixed">
-        <h1>App animales</h1>
-        <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+        <h1>Cuéntanos más</h1>
+        <a href="#check" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
         <a href="#previodenuncia" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> <!-- boton atrás -->
     </div><!-- /header -->
     
@@ -319,24 +319,55 @@
         <textarea name="textarea-1" id="textarea-1"></textarea>
         </form>
         
-        <div class="botones-sociales">
-                                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all ui-btn-inline">Facebook</a>
-                                <a href="#" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline">Twitter</a>
-                                <a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all  ui-btn-inline">mapa</a>
+        <div class="ui-grid-d center">
+            <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline">Button</a></div>
+            <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-inline">Button</a></div>
+            <div class="ui-block-c"><a class="ui-shadow ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline">Button</a></div>
+            <div class="ui-block-d"></div>
+            <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
         </div> <!-- /botones sociales -->
     </div>
     
     <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
                     <div data-role="navbar">
                         <ul>
-                            <li><a href="#muro" data-icon="bullets">Muro</a></li>
-                            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reportar</a></li>
-                            <li><a href="#mapa" data-icon="location">Mapa</a></li>
+                           <li><a href="#muro" data-icon="bullets">Mi muro</a></li>
+                           <li><a href="#denuncia" data-icon="camera" data-theme="a">Reporta</a></li>
+                           <li><a href="#mapa" data-icon="location">Ubica</a></li>
                         </ul>
                     </div><!-- /navbar -->
                 </div>
 </div> <!-- Final de página -->
 
+
+
+
+<!-- CHECK-->
+<div data-role="page" id="check">
+    <div data-role="header" data-position="fixed">
+            	<h1>¡Genial!</h1>
+                <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
+    </div>
+    
+    <div align= center role="main" class="ui-content">
+        <img src="icon/icono check.png" class="iconocheck" width="50%">
+        <p><b>Lorem ipsum dolor sit amet,</b></p>
+        <p><b>consectetur adipiscing elit.</b></p>
+        <p><b>Mauris aliquet, justo vitae</b></p>
+        <p><b>porta lacinia, erat mi lacinia</b></p>
+        <p><b>ex, euismod turpis duis.</b></p>
+    </div>
+    
+    <div data-role="footer" data-position="fixed"> <!-- barra de iconos -->
+            <div data-role="navbar">
+                        <ul>
+                            <li><a href="#muro" data-icon="bullets">Mi muro</a></li>
+                            <li><a href="#denuncia" data-icon="camera" data-theme="a">Reporta</a></li>
+                            <li><a href="#mapa" data-icon="location">Ubica</a></li>
+                        </ul>
+            </div><!-- /navbar -->
+    </div>
+</div> <!-- Final de página -->
 
 
 
@@ -374,31 +405,30 @@
 
     <div data-role="header" data-position="fixed">
         	<h1>Configuración</h1>
-            <a href="#configuracion" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right">No text</a> <!-- boton configuracion -->
             <a href="#muro" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a>
         </div>
         
     <div role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
-            <li><a href="#"><img src="../_assets/img/gf.png" alt="privacidad" class="ui-li-icon ui-corner-none">Privacidad</a></li>
-            <li><a href="#"><img src="../_assets/img/de.png" alt="cuentas" class="ui-li-icon">Cuentas enlazadas</a></li>
-            <li><a href="#"><img src="../_assets/img/gb.png" alt="notificaciones" class="ui-li-icon">Notificaciones</a></li>
-            <li><a href="#"><img src="../_assets/img/fi.png" alt="originales" class="ui-li-icon">Config. Fotos originales</a></li>
-            <li><a href="#"><img src="../_assets/img/us.png" alt="ayuda" class="ui-li-icon ui-corner-none">Ayuda</a></li>
-            <li><a href="#"><img src="../_assets/img/us.png" alt="error" class="ui-li-icon ui-corner-none">Reportar un error</a></li>
-            <li><a href="#"><img src="../_assets/img/us.png" alt="version" class="ui-li-icon ui-corner-none">Versión</a>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="privacidad" class="ui-li-icon ui-corner-none">Privacidad</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="cuentas" class="ui-li-icon">Cuentas enlazadas</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="notificaciones" class="ui-li-icon">Notificaciones</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="originales" class="ui-li-icon">Config. Fotos originales</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="ayuda" class="ui-li-icon ui-corner-none">Ayuda</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="error" class="ui-li-icon ui-corner-none">Reportar un error</a></li>
+            <li><a href="#"><img src="icon/iconos config/icono config-01.png" alt="version" class="ui-li-icon ui-corner-none">Versión</a>
                 <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop"></a>
             </li>
-            <li><a href="#login"><img src="../_assets/img/us.png" alt="United States" class="ui-li-icon ui-corner-none">Salir</a></li>
+            <li><a href="#login"><img src="icon/iconos config/icono config-01.png" alt="United States" class="ui-li-icon ui-corner-none">Salir</a></li>
         </ul>
         
             <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
             <h3>App animales - Versión</h3>
-            <p>®2014 Kakofonía Studio. Todos los derechos reservados.</p>
+            <p>®2014 EDALDI Studio. Todos los derechos reservados.</p>
             <p>Este es un software libre para usarse.</p>
             <p>Si piensas que App Animales es útil y te gustaría ayudar a mejorarlo, por favor, haz una donación.</p>
             <p>¡Muchas gracias!</p>
-            <p>Kakofonía Studio.</p>
+            <p>EDALDI Studio.</p>
             </p>
             <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-btn-inline ui-mini">Donación</a>
             <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-btn-inline ui-mini">Aceptar</a>

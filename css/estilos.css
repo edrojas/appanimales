@@ -34,6 +34,7 @@ img.popphoto.imagenAncha {
 
 .ui-grid-d {
     margin-left: 30px;
+    
 }
 
 .logologin {
@@ -45,7 +46,6 @@ img.popphoto.imagenAncha {
     color: white;
 }
 
-.videoreporte {
-    width: 100%;
-    height: auto;
+.iconocheck {
+    margin-top: 120px;
 }
