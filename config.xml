@@ -7,14 +7,14 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Pet It!</name>
+    <name>¡Woof! app</name>
 
     <description>
-        Un aplicación para denuncias.
+        Una app para reportar maltrato y acompañar a los animales de Bogotá.
     </description>
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
-        María Alejandra Camargo y Edgar Mauricio Rojas
+        Edgar M. Rojas Henao, Alejandra Camargo y Diana C. Angarita
     </author>
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
